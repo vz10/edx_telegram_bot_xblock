@@ -23,6 +23,64 @@
     {{ item.content|safe }}
 {% endfor %}
     </ol>
-{% if can_add %}
-<div class="add-xblock-component new-component-item adding"></div>
-{% endif %}
+
+<div class="add-xblock-component new-component-item adding">
+
+  <div class="new-component">
+      <h5>Add New Component</h5>
+    <ul class="new-component-type">
+      <li>  
+      <button type="button" class="multiple-templates add-xblock-component-button" data-type="html">
+        <span class="large-template-icon large-html-icon"></span>
+        <span class="sr"> Add Component:</span>
+        <span class="name">HTML</span>
+      </button>
+      </li>
+
+      <li>    
+      <button type="button" class="multiple-templates add-xblock-component-button" data-type="problem">
+        <span class="large-template-icon large-problem-icon"></span>
+        <span class="sr"> Add Component:</span>
+        <span class="name">Problem</span>
+      </button>
+      </li>
+
+      <li>    
+      <button type="button" class="single-template add-xblock-component-button" data-type="video" data-category="video">
+        <span class="large-template-icon large-video-icon"></span>
+        <span class="sr"> Add Component:</span>
+        <span class="name">Video</span>
+      </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="new-component-templates new-component-html">
+      <div class="tab current" id="tab1" tabindex="-1" role="dialog" aria-label="html Component Template Menu">
+          <ul class="new-component-template"> 
+              <li class="editor-md empty">
+                  <button type="button" class="button-component" data-category="html">
+                      <span class="name">Text</span>
+                  </button>
+              </li> 
+          </ul>
+          <button class="cancel-button" data-type="html">Cancel</button>
+      </div>
+  </div>
+  
+  <div class="new-component-templates new-component-problem">
+      <div class="tab current ui-tabs-panel ui-widget-content ui-corner-bottom" id="tab1" aria-labelledby="ui-id-1" role="tabpanel" aria-expanded="true" aria-hidden="false" style="display: block;">
+          <ul class="new-component-template">
+              <li class="editor-md">
+                  <button type="button" class="button-component" data-category="problem" data-boilerplate="blank_common.yaml">
+                      <span class="name">Blank Common Problem</span>
+                  </button>
+              </li>      
+          </ul>
+      </div>
+      <button class="cancel-button" data-type="problem">Cancel</button>
+  </div>
+
+  <div class="new-component-templates new-component-video"></div>
+  
+</div>
