@@ -1,0 +1,27 @@
+{% load i18n l10n %}
+
+<div class="editor-with-buttons">
+    {% for field in form %}
+    <div style="margin: 20px 20px;">
+        {{ field.errors }}
+        <h5>{{ field.label }}</h5>
+        <div class="padding: 40px 0 40px 0;">
+         {{ field }}
+        </div>
+        {% if field.help_text %}
+        <label class="help">{{ field.help_text|safe }}</label>
+        {% endif %}
+    </div>
+    {% endfor %}
+  <div class="xblock-actions">
+    <ul>
+      <li class="action-item">
+        <a href="#" class="button action-primary save-button">{% trans "Save" %}</a>
+      </li>
+
+      <li class="action-item">
+        <a href="#" class="button cancel-button">{% trans "Cancel" %}</a>
+      </li>
+    </ul>
+  </div>
+</div>

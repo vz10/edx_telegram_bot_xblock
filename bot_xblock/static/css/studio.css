@@ -1,0 +1,17 @@
+h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.wrong_xblock {
+    border: solid 3px red;
+    border-radius: 5px;
+}
+
+.wrong_xblock::before{
+    content: " This xblock has wrong type for this section, move it to another or delete, in other way bot won't work correct";
+    color: red;
+    display: block;
+    font-weight: bold;
+    padding: 5px 10px;
+}

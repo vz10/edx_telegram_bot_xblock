@@ -1,0 +1,9 @@
+/* CSS for BotXBlock */
+
+.bot_xblock_block .count {
+    font-weight: bold;
+}
+
+.bot_xblock_block p {
+    cursor: pointer;
+}

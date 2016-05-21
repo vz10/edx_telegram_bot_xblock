@@ -1,0 +1,28 @@
+<h3>Theoretical part</h3>
+    <ol class="reorderable-container" id="theoretical_part">
+{% for item in items_theory %}
+    {{ item.content|safe }}
+
+    {% endfor %}
+    </ol>
+<h3>Questions part</h3>
+    <ol class="reorderable-container" id="question_part">
+{% for item in items_question %}
+    {{ item.content|safe }}
+{% endfor %}
+    </ol>
+<h3>Positive reaction</h3>
+    <ol class="reorderable-container" id="positive_part">
+{% for item in positive_items %}
+    {{ item.content|safe }}
+{% endfor %}
+    </ol>
+<h3>Negative reaction</h3>
+    <ol class="reorderable-container" id="negative_part">
+{% for item in negative_items %}
+    {{ item.content|safe }}
+{% endfor %}
+    </ol>
+{% if can_add %}
+<div class="add-xblock-component new-component-item adding"></div>
+{% endif %}
