@@ -40,11 +40,13 @@ function BotXBlockStudio(runtime, element) {
         });
     });
 
-    $( ".reorderable-container" ).on( "sortstart", function( event, ui ) {
+    $( ".reorderable-container").on( "sortstart", function( event, ui ) {
         $("ol:not(:has(li))").append('<li class="component-placeholder"><h3>Put something here</h3></li>')
-    } );
+    });
 
-        $('#negative_part').on('DOMNodeInserted', '.studio-xblock-wrapper', function () {
+    $( ".reorderable-container" ).on("sort", function( event, ui ) {console.log('delete');} );
+
+    $('#negative_part').on('DOMNodeInserted', '.studio-xblock-wrapper', function () {
         check_xblocks_type();
     });
 

@@ -4,7 +4,7 @@ import pkg_resources
 from django.template import Context, Template
 
 from xblock.core import XBlock
-from xblock.fields import Scope, Integer, Float
+from xblock.fields import Scope, Integer
 from xblock.fragment import Fragment
 from xblockutils2.studio_editable import StudioContainerXBlockMixin
 
@@ -29,7 +29,7 @@ class BotXBlock(StudioContainerXBlockMixin, XBlock):
                             scope=Scope.settings)
     negative_part = Integer(help="Xblocks for negative part", default=0,
                             scope=Scope.settings)
-    passing_grade = Float(help="Xblocks for negative part", default=1.0,
+    passing_grade = Integer(help="Xblocks for negative part", default=1.0,
                           scope=Scope.settings)
 
 

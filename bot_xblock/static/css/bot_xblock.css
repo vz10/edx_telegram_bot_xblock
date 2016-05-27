@@ -1,9 +1,5 @@
 /* CSS for BotXBlock */
-
-.bot_xblock_block .count {
+.informatiom, .bot_xblock_block{
     font-weight: bold;
-}
-
-.bot_xblock_block p {
-    cursor: pointer;
+    padding: 5px 10px;
 }
