@@ -6,8 +6,7 @@ from django.template import Context, Template
 from xblock.core import XBlock
 from xblock.fields import Scope, Integer
 from xblock.fragment import Fragment
-from xblockutils2.studio_editable import StudioContainerXBlockMixin
-
+from xblockutils.studio_editable import StudioContainerXBlockMixin
 from .forms import BotXBlockForm
 
 
