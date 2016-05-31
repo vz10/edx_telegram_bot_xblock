@@ -1,4 +1,4 @@
-"""TO-DO: Write a description of what this XBlock is."""
+"""You can use this Xblock to create course which can be passed usig telegram bot"""
 
 import pkg_resources
 from django.template import Context, Template
@@ -29,8 +29,7 @@ class BotXBlock(StudioContainerXBlockMixin, XBlock):
     negative_part = Integer(help="Xblocks for negative part", default=0,
                             scope=Scope.settings)
     passing_grade = Integer(help="Xblocks for negative part", default=1.0,
-                          scope=Scope.settings)
-
+                            scope=Scope.settings)
 
     def _is_studio(self):
         studio = False
@@ -47,7 +46,7 @@ class BotXBlock(StudioContainerXBlockMixin, XBlock):
 
     def _render_template(self, ressource, **kwargs):
         template = Template(self.resource_string(ressource))
-        context = dict({},**kwargs)
+        context = dict({}, **kwargs)
         html = template.render(Context(context))
         return html
 
@@ -79,7 +78,6 @@ class BotXBlock(StudioContainerXBlockMixin, XBlock):
                     'can_reorder': can_reorder,
                     }))
 
-    # TO-DO: change this view to display your data your own way.
     def student_view(self, context=None):
         """
         The primary view of the BotXBlock, shown to students
@@ -135,8 +133,6 @@ class BotXBlock(StudioContainerXBlockMixin, XBlock):
             self.passing_grade = form.cleaned_data['passing_grade']
             return {'result': 'success'}
 
-    # TO-DO: change this to create the scenarios you'd like to see in the
-    # workbench while developing your XBlock.
     @staticmethod
     def workbench_scenarios():
         """A canned scenario for display in the workbench."""
